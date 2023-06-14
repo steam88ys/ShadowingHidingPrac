@@ -26,14 +26,17 @@ namespace ShadowingHidingPrac31
         }
 
         public static int number = 10;
-        Expand All
-	@@ -26,6 +34,9 @@ static void Main(string[] args)
+        static void Main(string[] args)
+        {
+            int number = 20;
+            Console.WriteLine(number);
+            Child child = new Child();
             Console.WriteLine(child.variable);
             Parent p = child;
-        Console.WriteLine(p.variable);
+            Console.WriteLine(p.variable);
 
             child.Method();
             p.Method();
         }
-}
+    }
 }
