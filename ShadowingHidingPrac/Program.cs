@@ -14,12 +14,20 @@ namespace ShadowingHidingPrac31
             {
                 Console.WriteLine("부모의 메서드");
             }
+            public virtual void Method2()
+            {
+                Console.WriteLine("부모의 메서드");
+            }
         }
 
         class Child : Parent
         {
             public new string variable = "shadowing";
             public new void Method()
+            {
+                Console.WriteLine("자식의 메서드");
+            }
+            public override void Method2()
             {
                 Console.WriteLine("자식의 메서드");
             }
@@ -37,6 +45,9 @@ namespace ShadowingHidingPrac31
 
             child.Method();
             p.Method();
+
+            child.Method2();
+            p.Method2();
         }
     }
 }
